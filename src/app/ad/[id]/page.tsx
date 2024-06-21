@@ -34,7 +34,7 @@ export default async function SingleAdPage(args: Props) {
         {session && session?.user?.email === adDoc.userEmail && (
           <div className="mt-2 flex gap-2">
           <Link href={`/edit/${adDoc._id}`} className="rounded-md border border-blue-600 text-blue-600 px-3 py-1 flex items-center justify-center"> <span className="text-xs"> <EditIcon/> </span>Edit</Link>
-          <DeleteButton id={adDoc._id} /> 
+          <DeleteButton id={adDoc.id} /> 
           </div>
         )}
         <h2 className="text-md text-graysm">

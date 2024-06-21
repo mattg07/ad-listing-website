@@ -2,7 +2,7 @@
 
 import mongoose from "mongoose";
 import { AdModel } from "../../models/Ad";
-import { authOptions } from "../api/auth/[...nextauth]/route";
+import { authOptions } from "@/app/api/auth/[...nextauth]/route";
 import { getServerSession } from "next-auth";
 import { revalidatePath } from "next/cache";
 
