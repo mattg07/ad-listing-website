@@ -57,35 +57,35 @@ export default function AdListingForm({
 
   return (
     <form
-      action={handleSubmit}
-      className="max-w-xl mx-auto grid grid-cols-2 gap-12"
-    >
-      <div className="grow pt-8">
-        <UploadMedia files={files} setFiles={setFiles} />
-        <div className="mt-8">
-          <label htmlFor="">Location</label>
-          <button
-            type="button"
-            onClick={handleFindMyPosition}
-            className="flex items-center justify-center gap-1 w-full py-1 border border-blue-600 text-blue-600 rounded"
-          >
-            {" "}
-            <LocationSearchingIcon /> Share location
-          </button>
-          <div className=" mt-4 bg-gray-200 min-h-12 rounded overflow-hidden">
-            <LocationPicker
-              gpsCords={gpsCords}
-              defaultLocation={locationDef}
-              onChange={(location) => setLocation(location)}
-            />
-          </div>
-        </div>
+  action={handleSubmit}
+  className="max-w-xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-12"
+>
+  <div className="grow pt-8 sm:pt-8">
+    <UploadMedia files={files} setFiles={setFiles} />
+    <div className="mt-8">
+      <label htmlFor="location">Location</label>
+      <button
+        type="button"
+        onClick={handleFindMyPosition}
+        className="flex items-center justify-center gap-1 w-full py-1 border border-blue-600 text-blue-600 rounded"
+      >
+        <LocationSearchingIcon /> Share location
+      </button>
+      <div className="mt-4 bg-gray-200 min-h-12 rounded overflow-hidden">
+        <LocationPicker
+          gpsCords={gpsCords}
+          defaultLocation={locationDef}
+          onChange={(location) => setLocation(location)}
+        />
       </div>
+    </div>
+  </div>
 
-      <div className="grow pt-2">
-        <AdTextInput defaultValues={defaultTexts} />
-        <PublishButton>{id ? "Save" : "Publish"}</PublishButton>
-      </div>
-    </form>
+  <div className="grow pt-2 sm:pt-2">
+    <AdTextInput defaultValues={defaultTexts} />
+    <PublishButton>{id ? "Save" : "Publish"}</PublishButton>
+  </div>
+</form>
+
   );
 }
