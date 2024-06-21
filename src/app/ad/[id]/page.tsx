@@ -26,7 +26,7 @@ export default async function SingleAdPage(args: Props) {
   const session = await getServerSession(authOptions);
   return (
     <div className="flex flex-col md:flex-row">
-      <div className=" w-full h-[550px]  md:w-3/5 bg-gray-100 flex flex-col">
+      <div className=" w-full h-[650px]  md:w-3/5 bg-gray-100 flex flex-col">
         <Gallery files={adDoc.files} />
       </div>
       <div className="w-full md:w-2/5 p-4 md:p-8">

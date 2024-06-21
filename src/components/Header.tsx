@@ -25,7 +25,7 @@ export default function Header({ session }: { session: Session | null }) {
             >
               Login
             </button>
-            <button className="border px-6">Register</button>
+            <button onClick={() => signIn("google")} className="border px-6">Register</button>
           </>
         )}
         {session?.user && (
