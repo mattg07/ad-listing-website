@@ -1,7 +1,7 @@
 'use server';
 
 import { getServerSession } from "next-auth";
-import { authOptions } from "../api/auth/[...nextauth]/route";
+import { authOptions } from "@/libs/auth";
 import { connect } from "@/libs/Helpers";
 import { AdModel } from "@/models/Ad";
 import ListingCard from "@/components/ListingCard";

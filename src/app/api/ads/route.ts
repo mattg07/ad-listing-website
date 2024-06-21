@@ -2,8 +2,7 @@ import { connect } from "@/libs/Helpers";
 import { Ad, AdModel } from "@/models/Ad";
 import { FilterQuery, PipelineStage } from "mongoose";
 import { getServerSession } from "next-auth";
-import { authOptions } from "../auth/[...nextauth]/route";
-
+import { authOptions } from "@/libs/auth";
 export async function GET(request: Request, res: Response) {
   await connect();
   const url = new URL(request.url);

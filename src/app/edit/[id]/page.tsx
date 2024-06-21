@@ -1,4 +1,4 @@
-import { authOptions } from "@/app/api/auth/[...nextauth]/route";
+import { authOptions } from "@/libs/auth";
 import AdListingForm from "@/components/AdListingForm";
 import { connect } from "@/libs/Helpers";
 import { AdModel } from "@/models/Ad";
