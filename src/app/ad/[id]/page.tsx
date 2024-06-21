@@ -1,6 +1,6 @@
 "use server";
 
-import { authOptions } from "@/app/api/auth/[...nextauth]/route";
+import { authOptions } from "@/libs/auth";
 import Gallery from "@/components/Gallery";
 import MapDisplay from "@/components/MapDisplay";
 import { connect } from "@/libs/Helpers";
