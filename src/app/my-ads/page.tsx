@@ -20,7 +20,7 @@ export default async function MyAdsPage() {
         <div>
         <h2 className="font-bold text-2xl text-center text-blue-600">Your ads</h2>
         <div className="grid grid-cols-2 m-auto">{adDocs?.map(ad => (
-            <ListingCard ad={ad}/>
+            <ListingCard key={ad._id} ad={ad}/>
         )) }</div></div>
     )
 }
